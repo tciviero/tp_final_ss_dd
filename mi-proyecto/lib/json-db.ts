@@ -24,6 +24,20 @@ export async function getCabanas(): Promise<Cabana[]> {
   }
 }
 
+export async function getCabanaById(id: string): Promise<Cabana | null> {
+  try {
+    const data = await fs.readFile(CABANAS_FILE, "utf-8");
+    const cabanas = JSON.parse(data) as Cabana[];
+
+    console.log('entra');
+    return cabanas.find((c) => c.id === id) ?? null;
+  } catch (error) {
+    console.error("Error al obtener cabaña por ID:", error);
+    return null;
+  }
+}
+
+
 /**
  * Lee el archivo de reservas y afirma su tipo como Reserva[].
  * @returns {Promise<Reserva[]>} El listado de reservas tipado.
