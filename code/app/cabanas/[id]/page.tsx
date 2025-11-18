@@ -1,75 +1,40 @@
-"use client"
-
-import { useState } from "react"
 import Link from "next/link"
+//import Cabana from "../../lib/types.ts"
+import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Badge } from "@/components/ui/badge"
-import { Users, DollarSign, ChevronLeft, Wifi, Flame, Utensils, Check } from 'lucide-react'
+import { Users, DollarSign, ChevronLeft, Check } from 'lucide-react'
 import { Navbar } from "@/components/navbar"
-import cabanas from "@/data/cabanas.json"
+import { Cabana } from "@/lib/types"
+import CabanaGallery from "./CabanaGallery"
+import ReservationForm from "./ReservationForm"
+import { getCabanaById } from "@/lib/json-db"
 
-export default function CabanaDetailPage({ params }: { params: { id: string } }) {
-  const cabana = cabanas.find((c) => c.id === params.id)
-  const [currentImage, setCurrentImage] = useState(0)
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-    fechaInicio: "",
-    fechaFin: "",
-    personas: ""
-  })
+/*async function getCabana(id: string): Promise<Cabana | null> {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/cabanas/${id}`, {
+      cache: 'no-store' // O usa 'force-cache' si quieres cache
+    })
+    
+    if (!res.ok) {
+      return null
+    }
+    
+    return res.json()
+  } catch (error) {
+    console.error('Error fetching cabana:', error)
+    return null
+  }
+}*/
+
+export default async function CabanaDetailPage({ params }: { params: Promise<{ id: string }> } ) {
+const { id } = await params
+//const cabana = await getCabana(id)
+const res = await fetch(`http://localhost:3000/api/cabanas/${id}`)
+const cabana = await res.json()
 
   if (!cabana) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Cabaña no encontrada</h1>
-          <Link href="/catalogo">
-            <Button>Volver al Catálogo</Button>
-          </Link>
-        </div>
-      </div>
-    )
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    const reserva = {
-      cabanaId: cabana.id,
-      cabanaNombre: cabana.nombre,
-      ...formData,
-      fecha: new Date().toISOString()
-    }
-
-    try {
-      const response = await fetch('/api/reservas', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(reserva)
-      })
-
-      if (response.ok) {
-        alert('¡Reserva realizada con éxito! Recibirás un email de confirmación.')
-        setFormData({
-          nombre: "",
-          email: "",
-          telefono: "",
-          fechaInicio: "",
-          fechaFin: "",
-          personas: ""
-        })
-      } else {
-        alert('Error al procesar la reserva. Por favor intenta nuevamente.')
-      }
-    } catch (error) {
-      console.error('[v0] Error submitting reservation:', error)
-      alert('Error al procesar la reserva. Por favor intenta nuevamente.')
-    }
+    notFound()
   }
 
   return (
@@ -92,32 +57,7 @@ export default function CabanaDetailPage({ params }: { params: { id: string } })
       <div className="container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Image Gallery */}
-          <div>
-            <div className="relative h-96 mb-4 rounded-lg overflow-hidden">
-              <img
-                src={cabana.imagenes[currentImage] || "/placeholder.svg"}
-                alt={`${cabana.nombre} - Imagen ${currentImage + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="grid grid-cols-3 gap-4">
-              {cabana.imagenes.map((imagen, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentImage(idx)}
-                  className={`relative h-24 rounded-lg overflow-hidden border-2 transition-colors ${
-                    currentImage === idx ? 'border-primary' : 'border-border hover:border-primary/50'
-                  }`}
-                >
-                  <img
-                    src={imagen || "/placeholder.svg"}
-                    alt={`Thumbnail ${idx + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
-          </div>
+          <CabanaGallery imagenes={cabana.imagenes} nombre={cabana.nombre} />
 
           {/* Details & Reservation */}
           <div>
@@ -156,90 +96,7 @@ export default function CabanaDetailPage({ params }: { params: { id: string } })
             </Card>
 
             {/* Reservation Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Reservar esta cabaña</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="nombre">Nombre completo</Label>
-                    <Input
-                      id="nombre"
-                      required
-                      value={formData.nombre}
-                      onChange={(e) => setFormData({...formData, nombre: e.target.value})}
-                      placeholder="Juan Pérez"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      placeholder="juan@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="telefono">Teléfono</Label>
-                    <Input
-                      id="telefono"
-                      type="tel"
-                      required
-                      value={formData.telefono}
-                      onChange={(e) => setFormData({...formData, telefono: e.target.value})}
-                      placeholder="+54 9 11 1234-5678"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="fechaInicio">Fecha de entrada</Label>
-                      <Input
-                        id="fechaInicio"
-                        type="date"
-                        required
-                        value={formData.fechaInicio}
-                        onChange={(e) => setFormData({...formData, fechaInicio: e.target.value})}
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="fechaFin">Fecha de salida</Label>
-                      <Input
-                        id="fechaFin"
-                        type="date"
-                        required
-                        value={formData.fechaFin}
-                        onChange={(e) => setFormData({...formData, fechaFin: e.target.value})}
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="personas">Cantidad de personas</Label>
-                    <Input
-                      id="personas"
-                      type="number"
-                      min="1"
-                      max={cabana.capacidad}
-                      required
-                      value={formData.personas}
-                      onChange={(e) => setFormData({...formData, personas: e.target.value})}
-                      placeholder={`Máximo ${cabana.capacidad}`}
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full" size="lg">
-                    Confirmar Reserva
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <ReservationForm cabana={cabana} />
           </div>
         </div>
       </div>
