@@ -85,7 +85,7 @@ const cabana = await res.json()
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
-                  {cabana.servicios.map((servicio, idx) => (
+                  {cabana.servicios.map((servicio: string, idx: number) => (
                     <div key={idx} className="flex items-center gap-2">
                       <Check className="h-5 w-5 text-primary" />
                       <span>{servicio}</span>

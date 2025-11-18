@@ -75,10 +75,10 @@ export async function POST(request: Request) {
       );
     }
 
-    if (cantidad_personas > cabanaSeleccionada.capacidad_maxima) {
+    if (cantidad_personas > cabanaSeleccionada.capacidad) {
       return NextResponse.json(
         {
-          message: `La capacidad máxima para la cabaña ${cabanaSeleccionada.nombre} es de ${cabanaSeleccionada.capacidad_maxima} personas.`,
+          message: `La capacidad máxima para la cabaña ${cabanaSeleccionada.nombre} es de ${cabanaSeleccionada.capacidad} personas.`,
         },
         { status: 400 }
       );

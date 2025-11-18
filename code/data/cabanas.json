@@ -64,9 +64,9 @@
     "precio": 300,
     "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Sala de juegos", "Parrilla", "Estacionamiento amplio"],
     "imagenes": [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600"
+      "https://www.patagoniavilla.com/cdn/shop/files/20200201_135443.jpg?v=1745510778&width=1946",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/517746683.webp?k=2f535bd565c1efc8b6d3afbfdd7907cc3f082f527133623ce2583b99a1eee672&o=",
+      "https://media-cdn.tripadvisor.com/media/photo-s/12/54/8c/cf/aldea-nevada-cabanas.jpg"
     ],
     "imagen": "https://www.patagoniavilla.com/cdn/shop/files/20200201_135443.jpg?v=1745510778&width=1946"
   }
