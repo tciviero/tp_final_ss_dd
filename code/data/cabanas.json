@@ -1,0 +1,73 @@
+[
+  {
+    "id": "1",
+    "nombre": "Cabaña del Bosque",
+    "descripcion": "Acogedora cabaña rodeada de naturaleza con vista al bosque patagónico",
+    "capacidad": 4,
+    "precio": 120,
+    "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Parrilla", "Estacionamiento"],
+    "imagenes": [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600"
+    ],
+    "imagen": "https://q-xx.bstatic.com/xdata/images/hotel/608x352/76190097.webp?k=3a4424696b760eb3ebf5aa3cb8905ce6079bc3e4e79eabbeb1f4910665418380&o="
+
+  },
+  {
+    "id": "2",
+    "nombre": "Cabaña Vista al Lago",
+    "descripcion": "Hermosa cabaña con vista panorámica al Lago Fagnano",
+    "capacidad": 6,
+    "precio": 180,
+    "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Jacuzzi", "Deck privado", "Parrilla"],
+    "imagenes": [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600"
+    ],
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1b0bD4PHFwysM_NqUvWKcXhlguRhRpNRa4w&s"
+  },
+  {
+    "id": "3",
+    "nombre": "Cabaña Montaña",
+    "descripcion": "Cabaña premium con vistas espectaculares a los Andes Fueguinos",
+    "capacidad": 8,
+    "precio": 250,
+    "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Sauna", "Chimenea", "Parrilla", "Estacionamiento"],
+    "imagenes": [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600"
+    ],
+    "imagen": "https://www.infodeushuaia.com/var/skiencerrocastor_com/storage/images/hoteles/hoteles-5-estrellas/finisterris-lodge-spa-hotel/finisterris-lodge-relax-spa/4954-1-esl-AR/Finisterris-Lodge-relax-Spa.jpg"
+  },
+  {
+    "id": "4",
+    "nombre": "Cabaña Romántica",
+    "descripcion": "Perfecta para parejas, con chimenea y ambiente íntimo",
+    "capacidad": 2,
+    "precio": 95,
+    "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Chimenea", "Bañera de hidromasaje"],
+    "imagenes": [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600"
+    ],
+    "imagen": "https://www.welcomeargentina.com/plantillas/webp/grandes/36938-03Gr.webp?-62169984000"
+  },
+  {
+    "id": "5",
+    "nombre": "Cabaña Familiar",
+    "descripcion": "Amplia cabaña ideal para familias grandes con múltiples habitaciones",
+    "capacidad": 10,
+    "precio": 300,
+    "servicios": ["Wi-Fi", "Calefacción", "Cocina equipada", "Sala de juegos", "Parrilla", "Estacionamiento amplio"],
+    "imagenes": [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600"
+    ],
+    "imagen": "https://www.patagoniavilla.com/cdn/shop/files/20200201_135443.jpg?v=1745510778&width=1946"
+  }
+]
