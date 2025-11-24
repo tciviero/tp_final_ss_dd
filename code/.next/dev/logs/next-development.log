@@ -7816,3 +7816,27 @@ This will cause a hydration error.%s tr
 [01:44:08.530] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
 [01:44:08.530] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/reservas","route":"/reservas"}
 [01:44:08.530] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/reservas color: rgb(120, 120, 120) color: inherit {"dp":"/reservas","o":"http://localhost:3000/reservas","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764022647325}
+[01:46:40.330] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:46:40.418] Server  LOG     SERVIDOR: --- Petición GET a /api/reservas recibida para listar ---
+[01:46:40.429] Server  LOG     SERVIDOR: Devolviendo 2 reservas.
+[01:46:40.467] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:46:40.467] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/reservas","route":"/reservas"}
+[01:46:40.467] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/reservas color: rgb(120, 120, 120) color: inherit {"dp":"/reservas","o":"http://localhost:3000/reservas","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764022799265}
+[01:46:44.101] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764022802890}
+[01:59:22.945] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/catalogo color: rgb(120, 120, 120) color: inherit {"dp":"/catalogo","o":"http://localhost:3000/catalogo","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764023561736}
+[01:59:25.897] Server  LOG     entra
+[01:59:26.095] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764023564895}
+[02:20:54.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:20:55.154] Server  LOG     SERVIDOR: --- Petición GET a /api/reservas recibida para listar ---
+[02:20:55.156] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:20:55.156] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/reservas","route":"/reservas"}
+[02:20:55.156] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/reservas color: rgb(120, 120, 120) color: inherit {"dp":"/reservas","o":"http://localhost:3000/reservas","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764024853899}
+[02:20:55.163] Server  LOG     SERVIDOR: Devolviendo 2 reservas.
+[02:21:25.883] Server  LOG     [EmailService] Simulando envío de email a: crgespartano@gmail.com
+[02:21:25.884] Server  LOG     [EmailService] Asunto: Confirmación de Reserva #R_a8f276 - 5
+[02:21:32.327] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:21:32.354] Server  LOG     SERVIDOR: --- Petición GET a /api/reservas recibida para listar ---
+[02:21:32.358] Server  LOG     SERVIDOR: Devolviendo 3 reservas.
+[02:21:32.463] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[02:21:32.463] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/reservas","route":"/reservas"}
+[02:21:32.463] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/reservas color: rgb(120, 120, 120) color: inherit {"dp":"/reservas","o":"http://localhost:3000/reservas","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764024891254}

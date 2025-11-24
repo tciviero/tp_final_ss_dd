@@ -26,5 +26,19 @@
     "cantidad_personas": 2,
     "fecha_creacion": "2024-11-14T11:45:00Z",
     "estado": "confirmada"
+  },
+  {
+    "id": "R_a8f276ac-700e-4851-994c-f4b15047fa74",
+    "cabana_id": "5",
+    "huesped": {
+      "nombre": "Pablo Navarro",
+      "email": "crgespartano@gmail.com",
+      "telefono": "+54 9 223 4545785"
+    },
+    "fecha_entrada": "2025-12-12",
+    "fecha_salida": "2025-12-18",
+    "cantidad_personas": 6,
+    "fecha_creacion": "2025-11-24T22:54:44.695Z",
+    "estado": "confirmada"
   }
 ]

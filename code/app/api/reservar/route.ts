@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { v4 as uuidv4 } from "uuid";
 import { getCabanas, getReservas, saveReserva } from "@/lib/json-db";
 import { Reserva, NuevaReservaPayload, Cabana } from "@/lib/types";
+import { sendConfirmationEmail } from "./emailService";
 
 /**
  * Manejador GET: Devuelve todas las reservas existentes.
@@ -146,6 +147,20 @@ export async function POST(request: Request) {
 
     await saveReserva(nuevaReserva);
     //TODO: enviar email de confirmacion, falta todo lo relacionado a email
+  // 3. ENVÍO DE EMAIL: Llamamos al servicio de email aquí
+    let emailExitoso = false;
+    try {
+        emailExitoso = await sendConfirmationEmail(nuevaReserva);
+        if (!emailExitoso) {
+            console.warn(`SERVIDOR: La reserva ${nuevaReserva.id} se guardó, pero falló el envío del email de confirmación al huésped.`);
+        }
+    } catch (emailError) {
+        // Capturar cualquier excepción de red o del servicio de email
+        console.error(`SERVIDOR: Excepción al intentar enviar email para reserva ${nuevaReserva.id}:`, emailError);
+    }
+    // Fin de la lógica de email
+
+
     // Respuesta exitosa
     return NextResponse.json(
       {
