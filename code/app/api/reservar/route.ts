@@ -4,6 +4,28 @@ import { getCabanas, getReservas, saveReserva } from "@/lib/json-db";
 import { Reserva, NuevaReservaPayload, Cabana } from "@/lib/types";
 
 /**
+ * Manejador GET: Devuelve todas las reservas existentes.
+ */
+export async function GET(request: Request) {
+  console.log("SERVIDOR: --- Petición GET a /api/reservas recibida para listar ---");
+  try {
+    const reservas: any[] = await getReservas(); // Obtiene todas las reservas del JSON
+    
+    // Aquí podrías agregar lógica para filtrar (ej. por fechas futuras) o ordenar.
+    
+    console.log(`SERVIDOR: Devolviendo ${reservas.length} reservas.`);
+    return NextResponse.json({ reservas: reservas }, { status: 200 });
+  } catch (error) {
+    console.error("SERVIDOR: ERROR 500 - Fallo al listar reservas:", error);
+    return NextResponse.json(
+      { message: "Error interno del servidor al obtener las reservas." },
+      { status: 500 }
+    );
+  }
+}
+
+
+/**
  * Verifica si dos rangos de fechas se superponen.
  * La superposición ocurre si (Nueva entrada < Salida existente) Y (Nueva salida > Entrada existente).
  */
@@ -15,6 +37,7 @@ function checkDateOverlap(
 ): boolean {
   return newStart < existingEnd && newEnd > existingStart;
 }
+
 
 export async function POST(request: Request) {
   try {

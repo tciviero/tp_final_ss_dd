@@ -4,5 +4,7 @@
   "/api/reservar/route": "app/api/reservar/route.js",
   "/cabanas/[id]/page": "app/cabanas/[id]/page.js",
   "/catalogo/page": "app/catalogo/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/res/page": "app/res/page.js",
+  "/reservas/page": "app/reservas/page.js"
 }

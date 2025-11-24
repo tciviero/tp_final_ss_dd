@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mountain, Wifi, Flame, Utensils, Trees, MapPin } from 'lucide-react'
+import { Mountain, Wifi, Flame, Utensils, Trees, MapPin,ListChecks } from 'lucide-react'
 import { Navbar } from "@/components/navbar"
 
 export default function Home() {
@@ -94,6 +94,18 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* Enlace al Panel de Administración (Discreto) - Único cambio funcional solicitado */}
+      <div className="py-4 bg-background border-t">
+        <div className="container mx-auto px-4 flex justify-center">
+          <a href="/reservas">
+            <Button variant="ghost" className="text-sm text-gray-500 hover:text-sky-600">
+              <ListChecks className="w-4 h-4 mr-2" />
+              Acceder al Panel de Gestión de Reservas
+            </Button>
+          </a>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="bg-card border-t py-8">
