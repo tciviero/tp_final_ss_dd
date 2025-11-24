@@ -1,12 +1,321 @@
-[00:00:02.239] Server  LOG      ✓ Ready in 1427ms
-[00:00:05.517] Server  LOG      ○ Compiling /cabanas/[id] ...
-[00:00:06.403] Server  WARN     ⚠ Cross origin request detected from 10.2.216.216 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:00:06.447] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:06.671] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:06.671] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:06.672] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://10.2.216.216:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://10.2.216.216:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763501937494}
-[00:00:08.058] Server  LOG     entra
-[00:00:11.763] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://10.2.216.216:3000/catalogo color: rgb(120, 120, 120) color: inherit {"dp":"/catalogo","o":"http://10.2.216.216:3000/catalogo","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763501942624}
-[00:01:57.757] Server  LOG     entra
-[00:01:57.980] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://10.2.216.216:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://10.2.216.216:3000/cabanas/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763502048854}
+[00:00:01.889] Server  LOG      ✓ Ready in 1264ms
+[00:00:06.583] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.679] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:06.679] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:06.679] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016405468}
+[00:00:07.609] Server  LOG     entra
+[00:00:09.210] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/catalogo color: rgb(120, 120, 120) color: inherit {"dp":"/catalogo","o":"http://localhost:3000/catalogo","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016408002}
+[00:00:11.797] Server  LOG     entra
+[00:00:12.021] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016410815}
+[00:00:36.145] Browser ERROR   Error submitting reservation: {}
+[00:03:10.838] Browser ERROR   Error submitting reservation: {}
+[00:03:11.741] Browser ERROR   Error submitting reservation: {}
+[00:03:12.279] Browser ERROR   Error submitting reservation: {}
+[00:03:12.585] Browser ERROR   Error submitting reservation: {}
+[00:03:12.700] Browser ERROR   Error submitting reservation: {}
+[00:03:12.846] Browser ERROR   Error submitting reservation: {}
+[00:03:13.314] Browser ERROR   Error submitting reservation: {}
+[00:03:14.496] Browser ERROR   Error submitting reservation: {}
+[00:03:16.921] Server  LOG     entra
+[00:03:17.291] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:17.480] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:03:17.481] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/cabanas/5","route":"/cabanas/[id]"}
+[00:03:17.481] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016596279}
+[00:03:36.998] Browser ERROR   Error submitting reservation: {}
+[00:03:40.630] Browser ERROR   Error submitting reservation: {}
+[00:03:42.836] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016621632}
+[00:05:12.328] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/catalogo color: rgb(120, 120, 120) color: inherit {"dp":"/catalogo","o":"http://localhost:3000/catalogo","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016711117}
+[00:05:14.691] Server  LOG     entra
+[00:05:14.860] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764016713655}
+[00:05:41.534] Browser ERROR   Error submitting reservation: {}
+[00:05:43.720] Browser ERROR   Error submitting reservation: {}
+[00:05:44.009] Browser ERROR   Error submitting reservation: {}
+[00:07:52.545] Server  LOG     
+[00:07:52.545] Server  LOG     Could not open page.tsx in the editor.
+[00:07:52.546] Server  LOG     
+[00:07:52.546] Server  LOG     When running on Windows, file names are checked against an access list to protect against remote code execution attacks. File names may consist only of alphanumeric characters (all languages), periods, dashes, slashes, and underscores.
+[00:07:52.546] Server  LOG     
+[00:09:16.453] Browser ERROR   Error submitting reservation: {}
+[00:09:17.221] Browser ERROR   Error submitting reservation: {}
+[00:09:17.407] Browser ERROR   Error submitting reservation: {}
+[00:13:43.279] Server  LOG      ✓ Compiled in 99ms
+[00:13:53.256] Server  LOG      ✓ Compiled in 107ms
+[00:13:59.951] Server  LOG      ✓ Compiled in 107ms
+[00:14:03.509] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:14:03.509] Browser ERROR   Error submitting reservation: {}
+[00:14:33.125] Server  LOG      ✓ Compiled in 87ms
+[00:14:38.602] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:14:38.602] Browser ERROR   Error submitting reservation: {}
+[00:14:39.245] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:14:39.245] Browser ERROR   Error submitting reservation: {}
+[00:14:39.551] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:14:39.551] Browser ERROR   Error submitting reservation: {}
+[00:15:01.152] Server  LOG      ✓ Compiled in 88ms
+[00:15:02.989] Server  LOG      ✓ Compiled in 82ms
+[00:15:05.679] Server  LOG      ✓ Compiled in 79ms
+[00:15:08.137] Server  LOG      ✓ Compiled in 78ms
+[00:15:10.997] Server  LOG      ✓ Compiled in 72ms
+[00:16:41.489] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:41.489] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:41.489] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:41.489] Browser ERROR   Error submitting reservation: {}
+[00:16:45.288] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:45.288] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:45.288] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:45.288] Browser ERROR   Error submitting reservation: {}
+[00:16:46.089] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:46.089] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:46.089] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:46.089] Browser ERROR   Error submitting reservation: {}
+[00:16:46.505] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:46.505] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:46.505] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:46.505] Browser ERROR   Error submitting reservation: {}
+[00:16:46.771] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:46.771] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:46.771] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:46.771] Browser ERROR   Error submitting reservation: {}
+[00:16:47.895] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:47.895] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:47.895] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:47.895] Browser ERROR   Error submitting reservation: {}
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:48.598] Browser ERROR   Error submitting reservation: {}
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:48.598] Browser ERROR   Error submitting reservation: {}
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:48.598] Browser ERROR   Error submitting reservation: {}
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:16:48.598] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:16:48.598] Browser ERROR   Error submitting reservation: {}
+[00:17:46.612] Server  LOG      ✓ Compiled in 96ms
+[00:17:54.225] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:17:54.225] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:17:54.225] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:17:54.225] Browser ERROR   Error submitting reservation: {}
+[00:17:57.779] Server  LOG      ✓ Compiled in 87ms
+[00:18:48.794] Server  LOG      ✓ Compiled in 83ms
+[00:18:55.427] Server  LOG      ✓ Compiled in 110ms
+[00:18:55.822] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:18:55.822] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:16.088] Server  LOG      ✓ Compiled in 84ms
+[00:19:16.818] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:16.818] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:23.136] Server  LOG      ✓ Compiled in 80ms
+[00:19:23.817] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:23.817] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:42.437] Server  LOG      ✓ Compiled in 84ms
+[00:19:42.808] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:42.808] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:46.312] Server  LOG      ✓ Compiled in 83ms
+[00:19:46.810] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:46.810] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:51.862] Server  LOG      ✓ Compiled in 88ms
+[00:19:52.811] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:52.811] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:53.510] Server  LOG      ✓ Compiled in 79ms
+[00:19:53.818] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:19:53.819] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:04.021] Server  LOG      ✓ Compiled in 75ms
+[00:20:04.812] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:04.812] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:22.884] Server  LOG      ✓ Compiled in 82ms
+[00:20:23.819] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:23.819] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 4
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser ERROR   Error submitting reservation: {}
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:26.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:20:59.636] Server  LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:00.815] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:00.815] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:06.738] Server  LOG     page.tsx
+[00:21:07.814] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:07.814] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:13.737] Server  LOG     page.tsx - CabanaDetailPage - cabana: {}
+[00:21:14.810] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:14.810] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:22.978] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:21:23.825] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:23.825] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:21:49.403] Server  LOG      ✓ Compiled in 123ms
+[00:21:51.505] Server  LOG      ✓ Compiled in 130ms
+[00:21:51.816] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:21:51.816] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:01.879] Server  LOG     entra
+[00:22:01.900] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:02.000] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:02.006] Server  LOG     BOTON CONFIRMAR RESERVA 1
+[00:22:02.519] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:02.772] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:02.772] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:02.772] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:22:02.772] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:22:02.772] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:02.772] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/cabanas/5","route":"/cabanas/[id]"}
+[00:22:02.772] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764017721567}
+[00:22:22.799] Server  LOG      ✓ Compiled in 124ms
+[00:22:23.812] Browser LOG     RESERVATIONFORM 1
+[00:22:23.812] Browser LOG     RESERVATIONFORM 1
+[00:22:25.238] Server  LOG     entra
+[00:22:25.259] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:25.351] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:25.355] Server  LOG     RESERVATIONFORM 1
+[00:22:25.694] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:25.875] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:25.875] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:22:25.875] Browser LOG     RESERVATIONFORM 1
+[00:22:25.875] Browser LOG     RESERVATIONFORM 1
+[00:22:25.875] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:25.875] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/cabanas/5","route":"/cabanas/[id]"}
+[00:22:25.875] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764017744663}
+[00:24:27.575] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:27.575] Browser LOG     RESERVATIONFORM 1
+[00:24:27.575] Browser LOG     RESERVATIONFORM 1
+[00:24:43.655] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:43.655] Browser LOG     RESERVATIONFORM 1
+[00:24:43.655] Browser LOG     RESERVATIONFORM 1
+[00:24:44.966] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:44.967] Browser LOG     RESERVATIONFORM 1
+[00:24:44.967] Browser LOG     RESERVATIONFORM 1
+[00:24:45.575] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:45.575] Browser LOG     RESERVATIONFORM 1
+[00:24:45.575] Browser LOG     RESERVATIONFORM 1
+[00:24:46.459] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:46.459] Browser LOG     RESERVATIONFORM 1
+[00:24:46.459] Browser LOG     RESERVATIONFORM 1
+[00:24:46.630] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:46.630] Browser LOG     RESERVATIONFORM 1
+[00:24:46.630] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:47.347] Browser LOG     RESERVATIONFORM 1
+[00:24:49.192] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:49.192] Browser LOG     RESERVATIONFORM 1
+[00:24:49.192] Browser LOG     RESERVATIONFORM 1
+[00:24:49.941] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:24:49.941] Browser LOG     RESERVATIONFORM 1
+[00:24:49.941] Browser LOG     RESERVATIONFORM 1
+[00:25:08.363] Server  LOG      ✓ Compiled in 132ms
+[00:25:08.811] Browser LOG     Este se ejecuta siempre
+[00:25:08.811] Browser LOG     Este se ejecuta siempre
+[00:25:10.675] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:10.675] Browser LOG     Este se ejecuta siempre
+[00:25:10.675] Browser LOG     Este se ejecuta siempre
+[00:25:11.237] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:11.237] Browser LOG     Este se ejecuta siempre
+[00:25:11.237] Browser LOG     Este se ejecuta siempre
+[00:25:26.152] Server  LOG      ✓ Compiled in 119ms
+[00:25:26.815] Browser LOG     A
+[00:25:26.816] Browser LOG     A
+[00:25:32.018] Server  LOG      ✓ Compiled in 141ms
+[00:25:34.617] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:35.501] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:36.264] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:36.465] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:36.667] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:41.273] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:42.923] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:46.723] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:47.070] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:47.699] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:25:47.959] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:26:25.405] Server  LOG      ✓ Compiled in 131ms
+[00:26:29.370] Browser LOG     se modifico un campo
+[00:26:30.333] Browser LOG     se modifico un campo
+[00:26:30.928] Browser LOG     se modifico un campo
+[00:26:31.190] Browser LOG     se modifico un campo
+[00:26:36.505] Server  LOG      ✓ Compiled in 95ms
+[00:27:15.206] Server  LOG      ✓ Compiled in 132ms
+[00:27:20.405] Browser LOG     SE APRETO BOTON
+[00:27:20.405] Browser LOG     BOTON CONFIRMAR RESERVA 2
+[00:27:20.405] Browser LOG     BOTON CONFIRMAR RESERVA 3
+[00:27:20.405] Browser LOG     BOTON CONFIRMAR RESERVA 4
+[00:27:20.405] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:27:20.405] Browser ERROR   Error submitting reservation: {}
+[00:27:42.779] Server  LOG      ✓ Compiled in 124ms
+[00:27:43.960] Server  LOG      ✓ Compiled in 146ms
+[00:27:53.995] Browser LOG     BOTON CONFIRMAR RESERVA 4
+[00:27:53.995] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:27:53.995] Browser ERROR   Error submitting reservation: {}
+[00:28:09.044] Server  LOG      ✓ Compiled in 100ms
+[00:28:12.994] Server  LOG      ✓ Compiled in 136ms
+[00:28:15.296] Browser LOG     Se apreto el boton de confirmar reserva
+[00:28:15.296] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:28:15.296] Browser ERROR   Error submitting reservation: {}
+[00:29:00.060] Server  LOG      ✓ Compiled in 131ms
+[00:29:06.389] Browser LOG     Se apreto el boton de confirmar reserva
+[00:29:06.583] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:29:39.670] Server  LOG      ✓ Compiled in 122ms
+[00:31:55.616] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:33:45.499] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:33:45.622] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:33:45.622] Browser ERROR   Error del servidor: 409 {"message":"Las fechas seleccionadas se superponen con una reserva existente. Por favor, elige otro rango."}
+[00:34:33.833] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:34:33.956] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:34:33.956] Browser ERROR   Error del servidor: 409 {"message":"Las fechas seleccionadas se superponen con una reserva existente. Por favor, elige otro rango."}
+[00:34:34.613] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:34:34.737] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:34:34.737] Browser ERROR   Error del servidor: 409 {"message":"Las fechas seleccionadas se superponen con una reserva existente. Por favor, elige otro rango."}
+[00:34:48.945] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:34:56.538] Server  LOG     entra
+[00:34:56.552] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:34:56.641] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:34:57.130] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:57.383] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:34:57.383] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:34:57.383] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:57.383] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/cabanas/5","route":"/cabanas/[id]"}
+[00:34:57.383] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764018496171}
+[00:35:24.580] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:35:24.691] Browser LOG     BOTON CONFIRMAR RESERVA 1
+[00:35:24.691] Browser ERROR   Error del servidor: 409 {"message":"Las fechas seleccionadas se superponen con una reserva existente. Por favor, elige otro rango."}
+[00:35:50.154] Server  LOG     Llego una solicitud POST a /api/reservar
+[00:36:30.443] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764018589239}
+[00:36:33.628] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/catalogo color: rgb(120, 120, 120) color: inherit {"dp":"/catalogo","o":"http://localhost:3000/catalogo","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764018592423}
+[00:36:38.239] Server  LOG     entra
+[00:36:38.254] Server  LOG     page.tsx - CabanaDetailPage - cabana:
+[00:36:38.433] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:36:38.433] Browser LOG     page.tsx - CabanaDetailPage - cabana:
+[00:36:38.433] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/cabanas/5 color: rgb(120, 120, 120) color: inherit {"dp":"/cabanas/[id]","o":"http://localhost:3000/cabanas/5","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764018597220}
+[00:36:41.403] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764018600202}
+[00:41:55.874] Server  LOG      ✓ Compiled in 151ms
+[00:42:14.777] Server  LOG      ✓ Compiled in 150ms
+[00:44:05.812] Server  LOG      ✓ Compiled in 122ms
+[00:44:16.645] Server  LOG      ✓ Compiled in 125ms
+[00:45:03.471] Server  LOG      ✓ Compiled in 159ms
+[00:45:07.712] Server  LOG      ✓ Compiled in 117ms
