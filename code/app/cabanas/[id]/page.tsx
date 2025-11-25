@@ -1,37 +1,40 @@
 import Link from "next/link"
-//import Cabana from "../../lib/types.ts"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, DollarSign, ChevronLeft, Check } from 'lucide-react'
 import { Navbar } from "@/components/navbar"
-import { Cabana } from "@/lib/types"
+import { Cabana, Reserva } from "@/lib/types"
 import CabanaGallery from "./CabanaGallery"
 import ReservationForm from "./ReservationForm"
-import { getCabanaById } from "@/lib/json-db"
+import { getCabanaById, getReservas } from "@/lib/json-db"
 
-/*async function getCabana(id: string): Promise<Cabana | null> {
+// Esta función se ejecuta en el servidor
+async function getCabanaConReservas(id: string): Promise<{ cabana: Cabana | null, reservas: Reserva[] }> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/cabanas/${id}`, {
-      cache: 'no-store' // O usa 'force-cache' si quieres cache
-    })
+    // Obtener la cabaña
+    const cabana = await getCabanaById(id)
     
-    if (!res.ok) {
-      return null
+    if (!cabana) {
+      return { cabana: null, reservas: [] }
     }
-    
-    return res.json()
+
+    // Obtener TODAS las reservas confirmadas para esta cabaña
+    const todasLasReservas = await getReservas()
+    const reservasDeCabana = todasLasReservas.filter(
+      (r: Reserva) => r.cabana_id === id && r.estado === "confirmada"
+    )
+
+    return { cabana, reservas: reservasDeCabana }
   } catch (error) {
     console.error('Error fetching cabana:', error)
-    return null
+    return { cabana: null, reservas: [] }
   }
-}*/
+}
 
-export default async function CabanaDetailPage({ params }: { params: Promise<{ id: string }> } ) {
-const { id } = await params
-//const cabana = await getCabana(id)
-const res = await fetch(`http://localhost:3000/api/cabanas/${id}`)
-const cabana = await res.json()
+export default async function CabanaDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const { cabana, reservas } = await getCabanaConReservas(id)
 
   if (!cabana) {
     notFound()
@@ -95,8 +98,8 @@ const cabana = await res.json()
               </CardContent>
             </Card>
 
-            {/* Reservation Form */}
-            <ReservationForm cabana={cabana} />
+            {/* Reservation Form - Pasamos las reservas para validación en cliente */}
+            <ReservationForm cabana={cabana} reservasExistentes={reservas} />
           </div>
         </div>
       </div>

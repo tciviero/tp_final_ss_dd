@@ -5,17 +5,24 @@ import { Reserva, NuevaReservaPayload, Cabana } from "@/lib/types";
 import { sendConfirmationEmail } from "./emailService";
 
 /**
- * Manejador GET: Devuelve todas las reservas existentes.
+ * Manejador GET: Devuelve las reservas filtradas por user_id
  */
 export async function GET(request: Request) {
-  console.log("SERVIDOR: --- Petición GET a /api/reservas recibida para listar ---");
+  console.log("SERVIDOR: --- Petición GET a /api/reservar recibida para listar ---");
+  
   try {
-    const reservas: any[] = await getReservas(); // Obtiene todas las reservas del JSON
+    const { searchParams } = new URL(request.url);
+    const userId = searchParams.get('user_id');
     
-    // Aquí podrías agregar lógica para filtrar (ej. por fechas futuras) o ordenar.
+    const reservas: Reserva[] = await getReservas();
     
-    console.log(`SERVIDOR: Devolviendo ${reservas.length} reservas.`);
-    return NextResponse.json({ reservas: reservas }, { status: 200 });
+    // Si hay user_id en la query, filtrar solo las reservas de ese usuario
+    const reservasFiltradas = userId 
+      ? reservas.filter(r => r.user_id === userId)
+      : reservas; // Si no hay user_id, devolver todas (para admin)
+    
+    console.log(`SERVIDOR: Devolviendo ${reservasFiltradas.length} reservas para user_id: ${userId || 'todos'}`);
+    return NextResponse.json({ reservas: reservasFiltradas }, { status: 200 });
   } catch (error) {
     console.error("SERVIDOR: ERROR 500 - Fallo al listar reservas:", error);
     return NextResponse.json(
@@ -25,10 +32,8 @@ export async function GET(request: Request) {
   }
 }
 
-
 /**
  * Verifica si dos rangos de fechas se superponen.
- * La superposición ocurre si (Nueva entrada < Salida existente) Y (Nueva salida > Entrada existente).
  */
 function checkDateOverlap(
   newStart: Date,
@@ -39,7 +44,6 @@ function checkDateOverlap(
   return newStart < existingEnd && newEnd > existingStart;
 }
 
-
 export async function POST(request: Request) {
   try {
     const payload: NuevaReservaPayload =
@@ -47,14 +51,17 @@ export async function POST(request: Request) {
 
     const {
       cabana_id,
+      user_id,
       fecha_entrada,
       fecha_salida,
       cantidad_personas,
       huesped,
     } = payload;
 
+    // Validación: ahora incluimos user_id
     if (
       !cabana_id ||
+      !user_id ||
       !fecha_entrada ||
       !fecha_salida ||
       !cantidad_personas ||
@@ -108,6 +115,7 @@ export async function POST(request: Request) {
       );
     }
 
+    // Verificar conflictos de fechas (todas las reservas confirmadas, no solo del usuario)
     const reservasExistentesParaCabana = reservas.filter(
       (r) => r.cabana_id === cabana_id && r.estado === "confirmada"
     );
@@ -137,6 +145,7 @@ export async function POST(request: Request) {
     const nuevaReserva: Reserva = {
       id: `R_${uuidv4()}`,
       cabana_id: cabana_id,
+      user_id: user_id, // 👈 Guardamos el user_id
       huesped: huesped,
       fecha_entrada: fecha_entrada,
       fecha_salida: fecha_salida,
@@ -146,22 +155,18 @@ export async function POST(request: Request) {
     };
 
     await saveReserva(nuevaReserva);
-    //TODO: enviar email de confirmacion, falta todo lo relacionado a email
-  // 3. ENVÍO DE EMAIL: Llamamos al servicio de email aquí
+    
+    // Envío de email
     let emailExitoso = false;
     try {
         emailExitoso = await sendConfirmationEmail(nuevaReserva);
         if (!emailExitoso) {
-            console.warn(`SERVIDOR: La reserva ${nuevaReserva.id} se guardó, pero falló el envío del email de confirmación al huésped.`);
+            console.warn(`SERVIDOR: La reserva ${nuevaReserva.id} se guardó, pero falló el envío del email.`);
         }
     } catch (emailError) {
-        // Capturar cualquier excepción de red o del servicio de email
         console.error(`SERVIDOR: Excepción al intentar enviar email para reserva ${nuevaReserva.id}:`, emailError);
     }
-    // Fin de la lógica de email
 
-
-    // Respuesta exitosa
     return NextResponse.json(
       {
         message: "Reserva creada exitosamente.",

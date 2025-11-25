@@ -40,5 +40,35 @@
     "cantidad_personas": 6,
     "fecha_creacion": "2025-11-24T22:54:44.695Z",
     "estado": "confirmada"
+  },
+  {
+    "id": "R_0a24ea4f-6f12-475a-8e8d-481c0edcc741",
+    "cabana_id": "1",
+    "user_id": "USER_cfb6bfa5-479f-4e5c-9105-c08622009799",
+    "huesped": {
+      "nombre": "Lionel Messi",
+      "email": "nosoymessi@gmail.com",
+      "telefono": "+54 9 223 3144 822"
+    },
+    "fecha_entrada": "2025-11-28",
+    "fecha_salida": "2025-11-30",
+    "cantidad_personas": 4,
+    "fecha_creacion": "2025-11-25T15:36:49.821Z",
+    "estado": "confirmada"
+  },
+  {
+    "id": "R_4d3d8d43-6056-4201-bff9-dcd69dcbf25c",
+    "cabana_id": "1",
+    "user_id": "USER_15b68765-93b4-4191-b353-462cea77ed49",
+    "huesped": {
+      "nombre": "abc",
+      "email": "asdasd@gmail.com",
+      "telefono": "313123"
+    },
+    "fecha_entrada": "2025-12-01",
+    "fecha_salida": "2025-12-02",
+    "cantidad_personas": 2,
+    "fecha_creacion": "2025-11-25T15:38:28.511Z",
+    "estado": "confirmada"
   }
 ]

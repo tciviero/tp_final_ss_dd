@@ -28,6 +28,7 @@ export interface Huesped {
 export interface Reserva {
   id: string;
   cabana_id: string;
+  user_id: string;
   huesped: Huesped;
   fecha_entrada: string;
   fecha_salida: string;
