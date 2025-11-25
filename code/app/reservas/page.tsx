@@ -48,7 +48,7 @@ export default function ReservasPage() {
 
       const fetchReservas = async () => {
         try {
-          // 👈 Filtrar por user_id
+          // Filtrar por user_id
           const response = await fetch(`/api/reservar?user_id=${id}`, {
               method: 'GET',
               headers: { 'Content-Type': 'application/json' },

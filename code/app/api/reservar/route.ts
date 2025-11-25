@@ -145,7 +145,7 @@ export async function POST(request: Request) {
     const nuevaReserva: Reserva = {
       id: `R_${uuidv4()}`,
       cabana_id: cabana_id,
-      user_id: user_id, // 👈 Guardamos el user_id
+      user_id: user_id, // Guardamos el user_id
       huesped: huesped,
       fecha_entrada: fecha_entrada,
       fecha_salida: fecha_salida,
